@@ -40,7 +40,7 @@ define Device/cmiot_ax18
 	DEVICE_DTS := qcom-ipq6018-ax18
 	DEVICE_DTS_CONFIG := config@cp03-c1
 	DEVICE_TITLE := CMIOT AX18
-	DEVICE_PACKAGES := ath11k-wifi-cmiot_ax18
+	DEVICE_PACKAGES := ath11k-wifi-cmiot_ax18 kmod-usb3 kmod-usb-phy-msm
 endef
 TARGET_DEVICES += cmiot_ax18
 
@@ -137,7 +137,7 @@ define Device/zn_m2
 	DEVICE_DTS := qcom-ipq6018-zn-m2
 	DEVICE_DTS_CONFIG := config@cp03-c1
 	DEVICE_TITLE := ZN M2
-	DEVICE_PACKAGES := ath11k-wifi-cmiot_ax18
+	DEVICE_PACKAGES := ath11k-wifi-cmiot_ax18  kmod-usb3 kmod-usb-phy-msm
 endef
 TARGET_DEVICES += zn_m2
 
