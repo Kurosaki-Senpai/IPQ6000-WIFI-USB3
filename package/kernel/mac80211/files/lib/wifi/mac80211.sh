@@ -68,10 +68,10 @@ BEGIN {
 ($1 == "Band" || $1 == "") && band {
         if (channel) {
 		mode="NOHT"
-		if (ht) mode="HT20"
+		if (ht) mode="HT40"
 		if (vht && band != "1:") mode="VHT80"
 		if (he) mode="HE80"
-		if (he && band == "1:") mode="HE20"
+		if (he && band == "1:") mode="HE40"
                 sub("\\[", "", channel)
                 sub("\\]", "", channel)
                 bands = bands band channel ":" mode " "
@@ -175,7 +175,7 @@ detect_mac80211() {
 			set wireless.radio${devidx}.band=${mode_band}
 			set wireless.radio${devidx}.htmode=$htmode
 			set wireless.radio${devidx}.num_global_macaddr=8
-			set wireless.radio${devidx}.country=AU
+			set wireless.radio${devidx}.country=US
 			set wireless.radio${devidx}.disabled=0
 
 			set wireless.default_radio${devidx}=wifi-iface
